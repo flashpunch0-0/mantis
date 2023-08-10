@@ -5,6 +5,9 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import "./SamplePage.css"
+// import DataTable from "./BasicTable";
+import BasicTable from './BasicTable';
+
 // import { spacing } from '@mui/system';
 
 // import { Tablecomponent } from './tablecomponent/Tablecomponent'
@@ -38,6 +41,12 @@ export default function SamplePage() {
     console.log(divbool)
   }, [divbool])
 
+  // table requirements
+  // const [challan, setchallan] = useState('');
+  // const changechallan = (event) => {
+  //   setchallan(event.target.value);
+  // };
+
 
 
   return (
@@ -63,7 +72,8 @@ export default function SamplePage() {
                 disabled
                 id="standard-disabled"
                 label="Disabled"
-                defaultValue="Hello World"
+                defaultValue="v3b25Tjr"
+
                 variant="standard"
               />
 
@@ -193,10 +203,12 @@ export default function SamplePage() {
                   <Button variant="contained" onClick={() => handlediv()}  >Cancel</Button>
                 </Box>
               </div>
-              <div className='form-table'>
-                {/* <Tablecomponent /> */}
-              </div>
+
             </Box>
+            <div className='table'>
+              <BasicTable />
+            </div>
+
           </div>
         </div>
       )}
