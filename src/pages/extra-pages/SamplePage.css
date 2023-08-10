@@ -1,0 +1,6 @@
+.divhidden {
+  @apply hidden;
+}
+.divopen {
+  @apply block;
+}
