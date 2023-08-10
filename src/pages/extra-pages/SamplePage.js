@@ -54,101 +54,128 @@ export default function SamplePage() {
 
       {/* 2nd div showing items only when add items button is clicked */}
       <div className='2nd div' >
+        <Box sx={{ m: 4 }}>
+          {/* adding 2 inner div for better structuring */}
 
-        {/* adding 2 inner div for better structuring */}
-        <div className='all select fields of 1st line'>
-          <TextField
-            id="standard-select-currency"
-            select
-            label="Style no"
-            defaultValue="Style no"
-            helperText="Please select your currency"
-            variant="standard"
-          >
-            {selectvalues.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
+          <div className='all select fields of 1st line'>
+            <Box
+              component="form"
+              sx={{
+                '& .MuiTextField-root': { m: 1, width: '25ch' },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <TextField
+                id="standard-select-currency"
+                select
+                label="Style no"
+                defaultValue="Style no"
+                helperText="Please select your currency"
+                variant="standard"
+              >
+                {selectvalues.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
 
-          <TextField
-            id="standard-select-currency"
-            select
-            label="Style code"
-            defaultValue="Syle code"
-            helperText="Please select your currency"
-            variant="standard"
-          >
-            {selectvalues.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
+              <TextField
+                id="standard-select-currency"
+                select
+                label="Style code"
+                defaultValue="Syle code"
+                helperText="Please select your currency"
+                variant="standard"
+              >
+                {selectvalues.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
 
-          <TextField
-            id="standard-select-currency"
-            select
-            label="HSn code"
-            defaultValue="HSn code"
-            helperText="Please select your currency"
-            variant="standard"
-          >
-            {selectvalues.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
+              <TextField
+                id="standard-select-currency"
+                select
+                label="HSn code"
+                defaultValue="HSn code"
+                helperText="Please select your currency"
+                variant="standard"
+              >
+                {selectvalues.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
 
-          <TextField
-            id="standard-select-currency"
-            select
-            label="bill number"
-            defaultValue="bill no"
-            helperText="Please select your currency"
-            variant="standard"
-          >
-            {selectvalues.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
+              <TextField
+                id="standard-select-currency"
+                select
+                label="bill number"
+                defaultValue="bill no"
+                helperText="Please select your currency"
+                variant="standard"
+              >
+                {selectvalues.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
 
-          <TextField
-            id="standard-select-currency"
-            select
-            label="colour"
-            defaultValue="colour"
-            helperText="Please select your currency"
-            variant="standard"
-          >
-            {selectvalues.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
-
-        </div>
-        <div className='all select fields of 2nd line'>
-          <TextField
-            id="standard-search"
-            label="Search field"
-            type="search"
-            variant="standard"
-          />
-        </div>
-        <div className='submit buttons '>
-          <Button variant="contained" >Submit</Button>
-          <Button variant="contained" >Cancel</Button>
-        </div>
-        <div className='form-table'>
-          {/* <Tablecomponent /> */}
-        </div>
-
+              <TextField
+                id="standard-select-currency"
+                select
+                label="colour"
+                defaultValue="colour"
+                helperText="Please select your currency"
+                variant="standard"
+              >
+                {selectvalues.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Box>
+          </div>
+          <div className='all select fields of 2nd line'>
+            <Box
+              component="form"
+              sx={{
+                '& .MuiTextField-root': { m: 1, width: '25ch' },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <TextField
+                id="standard-search"
+                label="Search field"
+                type="search"
+                variant="standard"
+              />
+            </Box>
+          </div>
+          <div className='submit buttons '>
+            <Box
+              component="form"
+              sx={{
+                '& > :not(style)': { m: 1, width: '25ch' },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <Button variant="contained" >Submit</Button>
+              <Button variant="contained" >Cancel</Button>
+            </Box>
+          </div>
+          <div className='form-table'>
+            {/* <Tablecomponent /> */}
+          </div>
+        </Box>
       </div>
 
     </div>
