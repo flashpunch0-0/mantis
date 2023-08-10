@@ -190,7 +190,7 @@ export default function SamplePage() {
                   autoComplete="off"
                 >
                   <Button variant="contained" >Submit</Button>
-                  <Button variant="contained" >Cancel</Button>
+                  <Button variant="contained" onClick={() => handlediv()}  >Cancel</Button>
                 </Box>
               </div>
               <div className='form-table'>
